@@ -1,0 +1,40 @@
+.navbar{
+    padding: 10px 0;
+    background-color: #1e94d2;
+}
+.navbar-toogle{
+    color: white;
+}
+.navbar-menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 210px;
+    margin: 0;
+    padding: 0;
+    z-index: 9998;  
+    background-color: #3a3633;
+
+    list-style: none;
+}
+.user-admin{
+    padding: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #525151;
+}
+.navbar-item{
+    padding: 15px;
+    color:rgb(187, 187, 187);
+}
+.navbar-item a{
+    color: rgb(187, 187, 187);
+    text-decoration: none;
+}
+.navbar-item a:hover{
+    color: antiquewhite;
+}
