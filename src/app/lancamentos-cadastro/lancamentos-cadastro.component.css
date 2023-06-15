@@ -1,0 +1,45 @@
+.inputs{
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+    width: 30%;
+}
+.form-content{
+    padding:5px;
+    display: flex;
+    gap:5px;
+}
+.description{
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+    width: 80%;
+}
+.value{
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+    width: 20%;
+}
+.selector{
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+    width: 50%;
+}
+.observation{
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+    width: 100%;
+}
+.save{
+    margin: 5px;
+}
+.p-button-secondary{
+    margin: 5px;
+}
+.link{
+    color: #337ab7;
+    margin: 5px;
+}

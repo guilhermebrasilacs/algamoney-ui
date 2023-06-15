@@ -1,0 +1,70 @@
+<div class="container">
+    <form>
+        <div class="ui-g" style="margin: 16px;">
+            <div class="ui-g-12">
+                <h1>Novo Lançamento</h1>
+            </div>
+
+            <div class="ui-g-12" style="margin-bottom:5px">
+                <p-selectButton [options]="tipos" #tipo></p-selectButton>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="inputs">
+                    <label>Vencimento</label>
+                    <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
+                </div>
+                <div class="inputs">
+                    <label>{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento'}}</label>
+                    <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
+                </div>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="description">
+                    <label>Descrição</label>
+                    <input pInputText type="text" name="descricao" 
+                    ngModel #descricao="ngModel" required minlength="10">
+
+                    <div *ngIf="descricao.hasError('required') && descricao.dirty" 
+                    class="ui-message ui-messages-error">
+                        Informe uma descrição
+                    </div>
+                    <div *ngIf="descricao.hasError('minlength') && descricao.dirty" 
+                    class="ui-message ui-messages-error">
+                        A descrição deve ter, no mínimo, {{ descricao.errors.minlength.requiredLength }} caracteres
+                    </div>
+                </div>
+                <div class="value">
+                    <label>Valor</label>
+                    <p-inputNumber mode="decimal" placeholder="0,00" [minFractionDigits]="2"></p-inputNumber>
+                </div>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="selector">
+                    <label>Categoria</label>
+                    <p-dropdown [options]="categorias" placeholder="Selecione"></p-dropdown>
+                </div>
+                <div class="selector">
+                    <label>Pessoa</label>
+                    <p-dropdown [options]="pessoas" placeholder="Selecione" [filter]="true"></p-dropdown>
+                </div>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="observation">
+                    <label>Observação</label>
+                    <textarea pInputTextArea rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="ui-g-12">
+                <button pButton type="submit" label="Salvar" class="save"></button>
+                <button pButton type="button" label="Novo" class="p-button-secondary"></button>
+                <a href="javascript:;" class="link">Voltar para a pesquisa</a>
+            </div>
+           
+        </div>
+    </form>
+</div>
