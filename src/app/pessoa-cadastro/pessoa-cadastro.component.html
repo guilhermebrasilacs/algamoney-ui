@@ -1,0 +1,74 @@
+<div class="container">
+    <form>
+        <div class="ui-g" style="margin: 16px">
+            <div class="ui-g-12">
+                <h1>Nova Pessoa</h1>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="inputs" style="width:100%">
+                    <label>Nome</label>
+                    <input pInputText type="text" name="nome"
+                    ngModel #nome="ngModel" required minlength="10">
+
+                    <div *ngIf="nome.hasError('required') && nome.dirty" 
+                    class="ui-message ui-messages-error">
+                        Informe um nome e sobrenome
+                    </div>
+                    <div *ngIf="nome.hasError('minlength') && nome.dirty" 
+                    class="ui-message ui-messages-error">
+                        O nome deve ter, no mínimo, {{ nome.errors.minlength.requiredLength }} caracteres
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="description">
+                    <label>Logradouro</label>
+                    <input pInputText type="text" name="logradouro"
+                    ngModel #logradouro="ngModel" required minlength="3">
+                    <div *ngIf="logradouro.hasError('required') && logradouro.dirty" 
+                    class="ui-message ui-messages-error">
+                        O endereço é obrigatório
+                    </div>
+                </div>
+                <div class="value">
+                    <label>Número</label>
+                    <p-inputNumber></p-inputNumber>
+                </div>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="inputs-3">
+                    <label>Complemento</label>
+                    <input pInputText type="text">
+                </div>
+                <div class="inputs-3">
+                    <label>Bairro</label>
+                    <input pInputText type="text">
+                </div>
+                <div class="inputs-3">
+                    <label>CEP</label>
+                    <p-inputMask mask="99999-999"></p-inputMask>
+                </div>
+            </div>
+
+            <div class="form-content p-input-filled p-fluid">
+                <div class="selector">
+                    <label>Cidade</label>
+                    <input pInputText type="text">
+                </div>
+                <div class="selector">
+                    <label>Estado</label>
+                    <input pInputText type="text">
+                </div>
+            </div>
+
+            <div class="ui-g-12">
+                <button pButton type="submit" label="Salvar" class="save"></button>
+                <button pButton type="button" label="Novo" class="p-button-secondary"></button>
+                <a href="javascript:;" class="link">Voltar para a pesquisa</a>
+            </div>
+        </div>
+    </form>
+</div>

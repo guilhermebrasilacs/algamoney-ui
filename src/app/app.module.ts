@@ -11,21 +11,21 @@ import {CalendarModule} from 'primeng/calendar';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputNumberModule} from 'primeng/inputnumber';
+import {InputMaskModule} from 'primeng/inputmask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { NavBarComponent } from './navbar/navbar.component';
-import { LancamentosCadastroComponent } from './lancamentos-cadastro/lancamentos-cadastro';
 import { FormsModule } from '@angular/forms';
+import { LancamentosModule } from './lancamentos/lancamentos.module';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LancamentosPesquisaComponent,
-    LancamentosCadastroComponent,
-    NavBarComponent
+    NavBarComponent,
+    PessoaCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +40,9 @@ import { FormsModule } from '@angular/forms';
     SelectButtonModule,
     DropdownModule,
     InputNumberModule,
-    FormsModule
+    FormsModule,
+    LancamentosModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

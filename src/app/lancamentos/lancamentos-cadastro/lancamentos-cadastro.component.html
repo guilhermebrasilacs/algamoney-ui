@@ -37,7 +37,12 @@
                 </div>
                 <div class="value">
                     <label>Valor</label>
-                    <p-inputNumber mode="decimal" placeholder="0,00" [minFractionDigits]="2"></p-inputNumber>
+                    <p-inputMask mask="9999,99" placeholder="R$0,00" name="valor"
+                    ngModel #valor="ngModel" required minlength="1"></p-inputMask>
+                    <div *ngIf="valor.hasError('required') && valor.dirty" 
+                    class="ui-message ui-messages-error">
+                        Informe um valor
+                    </div>
                 </div>
             </div>
 

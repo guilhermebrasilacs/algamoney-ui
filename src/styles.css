@@ -4,7 +4,6 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color:rgb(67, 67, 67);
 }
-
 label{
   font-weight: bold;
 }
@@ -12,4 +11,57 @@ label{
   margin: 0 auto;
   width: 1170px;
 }
-
+.inputs{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  width: 30%;
+}
+.inputs-3{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  width: 33%;
+}
+.form-content{
+  padding:5px;
+  display: flex;
+  gap:5px;
+}
+.description{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  width: 80%;
+}
+.value{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  width: 20%;
+}
+.selector{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  width: 50%;
+}
+.observation{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  width: 100%;
+}
+.save{
+  margin: 5px;
+}
+.p-button-secondary{
+  margin: 5px;
+}
+.link{
+  color: #337ab7;
+  margin: 5px;
+}
+.ui-g-12 button{
+  margin:5px;
+}
